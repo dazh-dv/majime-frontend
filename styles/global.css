@@ -1,0 +1,31 @@
+:root {
+  --primary-100-color: #1f1d2b;
+  --primary-200-color: #252936;
+  --primary-300-color: #2f3142;
+  --primary-400-color: #363850;
+  --primary-500-color: #9e9eb9;
+  --secondary-100-color: #ffac33;
+  --secondary-200-color: #22b07d;
+  --secondary-300-color: #ff5050;
+  --secondary-400-color: #12cdd9;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: var(--primary-100-color) !important;
+  min-height: 100vh;
+  color: var(--bs-gray-200);
+}
+.ad-toggle,
+.manga-poster-ahref i,
+.manga-poster-ahref:after,
+.manga-poster-ahref:before,
+.manga-poster-img,
+.read-tips .read-tips-keyboard {
+  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+}

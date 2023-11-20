@@ -1,0 +1,25 @@
+.head_sec {
+  display: flex;
+  justify-content: space-between;
+}
+
+.head_sec h2 {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 400;
+  color: var(--bs-gray-200);
+  margin: 0;
+}
+
+.head_sec a {
+  color: var(--bs-gray-400);
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-weight: 500;
+  display: flex;
+}
+
+.head_sec svg {
+  width: 24px;
+  height: 24px;
+}

@@ -1,0 +1,190 @@
+.aside {
+  min-width: 25%;
+}
+.aside > div {
+  position: sticky;
+  top: 10px;
+  background: var(--primary-200-color);
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.aside h2 {
+  font-size: 25px;
+  font-weight: 400;
+  color: var(--primary-500-color);
+  margin-bottom: 10px;
+}
+
+.input_search {
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.input_search input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  padding-left: 25px;
+  border-width: 0 0 2px 0;
+  color: var(--primary-500-color);
+  border-color: var(--primary-400-color);
+}
+
+.input_search svg {
+  position: absolute;
+  width: 20px;
+  bottom: 5px;
+  left: 0;
+  fill: var(--primary-500-color);
+}
+
+.container_genders {
+  color: var(--primary-500-color);
+}
+
+.container_sec h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--primary-500-color);
+  margin-bottom: 10px;
+}
+
+.container_sec > ul {
+  max-height: 250px;
+  overflow: auto;
+  padding: 0;
+  list-style: none;
+}
+/* width */
+.container_sec > ul::-webkit-scrollbar {
+  width: 3px;
+  cursor: pointer;
+}
+
+/* Track */
+.container_sec > ul::-webkit-scrollbar-track {
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Handle */
+.container_sec > ul::-webkit-scrollbar-thumb {
+  background: var(--primary-500-color);
+  cursor: pointer;
+}
+
+/* Handle on hover */
+.container_sec > ul::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-500-color);
+  cursor: pointer;
+}
+
+.gender_item {
+  color: var(--primary-500-color);
+  position: relative;
+  margin-left: 10px;
+  margin-bottom: 6px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.gender_item label {
+  cursor: pointer;
+  margin-left: 23px;
+}
+
+.gender_item svg {
+  width: 20px;
+  position: absolute;
+  left: 0;
+}
+
+.gender_item input {
+  display: none;
+}
+
+.gender_item input:checked ~ label,
+.gender_item input:checked ~ svg {
+  color: var(--secondary-100-color);
+}
+
+.container_extra_sec {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container_extra_sec .container_sec {
+  width: 50%;
+}
+
+.checkbox_extra {
+  position: relative;
+  width: 100%;
+  padding-left: 25px;
+  color: var(--primary-500-color);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.checkbox_extra label:before {
+  content: "";
+  left: 0;
+  position: absolute;
+  width: 19px;
+  height: 19px;
+  border: 3px solid var(--primary-500-color);
+  border-radius: 2px;
+}
+
+.checkbox_extra input[type="radio"] ~ label:before {
+  border-radius: 100%;
+}
+
+.checkbox_extra input:checked ~ label:before {
+  background: var(--primary-500-color);
+  transition: background 300ms ease-in-out;
+}
+
+.checkbox_extra input:checked ~ label:after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='3' stroke='currentColor'%3E%3Cpath color='%23000' stroke-linecap='round' stroke-linejoin='round' d='M4.5 12.75l6 6 9-13.5' /%3E%3C/svg%3E%0A");
+  left: 1px;
+  bottom: 3px;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox_extra input[type="radio"] ~ label:after {
+  bottom: 2px;
+  left: 0px;
+}
+
+.checkbox_extra input {
+  display: none;
+}
+
+.button_filter {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  background: var(--primary-400-color);
+  color: var(--primary-500-color);
+  border-radius: 4px;
+  transition-property: background, color;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+}
+
+.button_filter:hover {
+  background: var(--secondary-100-color);
+  color: var(--bs-gray-200);
+}

@@ -1,0 +1,298 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// Toggle global options
+$enable-gradients: true;
+$enable-shadows: true;
+
+$offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Include functions first
+@import "bootstrap/scss/functions";
+
+// Customize some defaults
+$body-color: #333;
+$body-bg: #fff;
+$border-radius: 0.4rem;
+$success: #7952b3;
+
+// Required
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+
+@import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/accordion";
+@import "bootstrap/scss/pagination";
+@import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+@import "bootstrap/scss/close";
+@import "bootstrap/scss/toasts";
+@import "bootstrap/scss/modal"; // Requires transitions
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/popover";
+@import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/offcanvas"; // Requires transitions
+// @import "bootstrap/scss/placeholders";
+
+// Helpers
+@import "bootstrap/scss/helpers";
+
+// Utilities
+@import "bootstrap/scss/utilities/api";
+
+$utilities: (
+  "display": (
+    responsive: true,
+    print: true,
+    property: display,
+    class: d,
+    values: inline inline-block block grid inline-grid table table-row
+      table-cell flex inline-flex none,
+  ),
+  "margin": (
+    responsive: true,
+    property: margin,
+    class: m,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-x": (
+    responsive: true,
+    property: margin-right margin-left,
+    class: mx,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-y": (
+    responsive: true,
+    property: margin-top margin-bottom,
+    class: my,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-top": (
+    responsive: true,
+    property: margin-top,
+    class: mt,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-end": (
+    responsive: true,
+    property: margin-right,
+    class: me,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-bottom": (
+    responsive: true,
+    property: margin-bottom,
+    class: mb,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  "margin-start": (
+    responsive: true,
+    property: margin-left,
+    class: ms,
+    values:
+      map-merge(
+        $spacers,
+        (
+          auto: auto,
+        )
+      ),
+  ),
+  // Negative margin utilities
+  "negative-margin":
+    (
+      responsive: true,
+      property: margin,
+      class: m,
+      values: $negative-spacers,
+    ),
+  "negative-margin-x": (
+    responsive: true,
+    property: margin-right margin-left,
+    class: mx,
+    values: $negative-spacers,
+  ),
+  "negative-margin-y": (
+    responsive: true,
+    property: margin-top margin-bottom,
+    class: my,
+    values: $negative-spacers,
+  ),
+  "negative-margin-top": (
+    responsive: true,
+    property: margin-top,
+    class: mt,
+    values: $negative-spacers,
+  ),
+  "negative-margin-end": (
+    responsive: true,
+    property: margin-right,
+    class: me,
+    values: $negative-spacers,
+  ),
+  "negative-margin-bottom": (
+    responsive: true,
+    property: margin-bottom,
+    class: mb,
+    values: $negative-spacers,
+  ),
+  "negative-margin-start": (
+    responsive: true,
+    property: margin-left,
+    class: ms,
+    values: $negative-spacers,
+  ),
+  // Padding utilities
+  "padding":
+    (
+      responsive: true,
+      property: padding,
+      class: p,
+      values: $spacers,
+    ),
+  "padding-x": (
+    responsive: true,
+    property: padding-right padding-left,
+    class: px,
+    values: $spacers,
+  ),
+  "padding-y": (
+    responsive: true,
+    property: padding-top padding-bottom,
+    class: py,
+    values: $spacers,
+  ),
+  "padding-top": (
+    responsive: true,
+    property: padding-top,
+    class: pt,
+    values: $spacers,
+  ),
+  "padding-end": (
+    responsive: true,
+    property: padding-right,
+    class: pe,
+    values: $spacers,
+  ),
+  "padding-bottom": (
+    responsive: true,
+    property: padding-bottom,
+    class: pb,
+    values: $spacers,
+  ),
+  "padding-start": (
+    responsive: true,
+    property: padding-left,
+    class: ps,
+    values: $spacers,
+  ),
+  // Gap utility
+  "gap":
+    (
+      responsive: true,
+      property: gap,
+      class: gap,
+      values: $spacers,
+    ),
+  "row-gap": (
+    responsive: true,
+    property: row-gap,
+    class: row-gap,
+    values: $spacers,
+  ),
+  "column-gap": (
+    responsive: true,
+    property: column-gap,
+    class: column-gap,
+    values: $spacers,
+  ),
+);
+
+//custom colors
+// $primary-100: #1f1d2b;
+// $primary-200: #252936;
+// $primary-300: #2f3142;
+// $primary-400: #363850;
+// $primary-500: #9e9eb9;
+// $secondary-100: #ffac33;
+// $secondary-200: #22b07d;
+// $secondary-300: #ff5050;
+// $secondary-400: #12cdd9;
